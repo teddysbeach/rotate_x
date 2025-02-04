@@ -1,3 +1,7 @@
+## 0.0.4 - 2025-02-04
+
+- Comments added to the README.md, `isScaleFollowsRotation` has been renamed to `scaleFollowsRotation`
+
 ## 0.0.3 - 2025-01-13
 
 - Flutter sdk version compatibility has been updated
