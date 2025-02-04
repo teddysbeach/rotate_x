@@ -30,20 +30,20 @@ RotateX(
     image: Image.network(
         'https://picsum.photos/300/500',
     ),
-    isScaleFollowsRotation: true,
+    scaleFollowsRotation: true,
 ),
+// This is an example of how to use the controller to rotate the image
 Slider(
     value: sliderValue,
     onChanged: (value) {
         setState(() {
-            controller.angle = (value * 0.5 * pi) - (pi / 4);
+            controller.angle = (value * 0.5 * pi) - (pi / 4); // THIS IS AN EXAMPLE OF HOW TO USE THE CONTROLLER TO ROTATE THE IMAGE
             sliderValue = value;
         });
     },
 ),
 
 // if you want to save the image, you can use the `toUint8List` function
-
 TextButton(
     onPressed: controller.save,
     child: const Text('Save'),
