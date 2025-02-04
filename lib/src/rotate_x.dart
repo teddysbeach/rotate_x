@@ -15,7 +15,7 @@ class RotateX extends StatefulWidget {
   final Image image;
 
   /// Whether the image should scale to maintain visibility during rotation
-  final bool isScaleFollowsRotation;
+  final bool scaleFollowsRotation;
 
   /// Optional controller to manage rotation state externally
   final RotateXController? controller;
@@ -23,7 +23,7 @@ class RotateX extends StatefulWidget {
   const RotateX({
     super.key,
     required this.image,
-    this.isScaleFollowsRotation = false,
+    this.scaleFollowsRotation = false,
     this.controller,
   });
 
@@ -81,7 +81,7 @@ class _RotateXState extends State<RotateX> {
       key: _controller.imageKey,
       child: ClipRRect(
         child: Transform.scale(
-          scale: widget.isScaleFollowsRotation ? scaleFactor : 1.0,
+          scale: widget.scaleFollowsRotation ? scaleFactor : 1.0,
           child: Transform.rotate(
             angle: _controller.angle,
             child: widget.image,

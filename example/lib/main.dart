@@ -43,7 +43,7 @@ class _RotateXExampleState extends State<RotateXExample> {
               'https://picsum.photos/300/500',
             ),
             controller: controller,
-            isScaleFollowsRotation: true,
+            scaleFollowsRotation: true,
           ),
           Slider(
             value: sliderValue,
